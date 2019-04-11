@@ -26,3 +26,5 @@ It also shows who's pitching (_+stats_), who's batting (_+stats_), current balls
 You don't need the space between mlb and the team code, so could call the Yankees just as _"mlbnyy"_
 
 I started to update how variables are printed within strings to <pre>"Hello world, $variablename!"</pre> rather than <pre>"Hello world, ". $variablename. "!"</pre> but am yet to finish. Needs doing.
+
+Uses [David Ferguson](http://dferg.us)'s [Workflow PHP class](https://github.com/jdfwarrior/Workflows).
