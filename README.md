@@ -2,6 +2,8 @@
 
 Workflow for Alfred V2 that uses the MLB API to check info about current games (i.e. quickly check the score, who's on base, who's pitching etc.)
 
+Keyword is mlb, followed by the 2 or 3 letter code for the team you're looking for (e.g. nyy for the Yankees).
+
 Shows runners on base at a glance using icons in the Alfred response, see [screenshots](#screenshots) below.
 
 If a game has already finish today it'll show the final result, including R|H|E, if a game is scheduled for today it'll give upcoming info.
