@@ -8,6 +8,8 @@ Shows runners on base at a glance using icons in the Alfred response, see [scree
 
 If a game has already finish today it'll show the final result, including R|H|E, if a game is scheduled for today it'll give upcoming info.
 
+__Note – the data parsing is a mess, and I'll clean it up soon. Check out my [MLB command](https://github.com/edmerix/edmerix.github.io/blob/master/core.js#L385) on my [personal website](https://edmerix.github.io) for a much better version in JavaScript!__
+
 ## Screenshots
 
 ### Example response during a game
