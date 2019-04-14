@@ -2,7 +2,7 @@
 
 Workflow for Alfred V2 that uses the MLB API to check info about current games (i.e. quickly check the score, who's on base, who's pitching etc.)
 
-Keyword is mlb, followed by the 2 or 3 letter code for the team you're looking for (e.g. nyy for the Yankees).
+Keyword is mlb, followed by the 2 or 3 letter code for the team you're looking for (e.g. _nyy_ for the Yankees).
 
 Shows runners on base at a glance using icons in the Alfred response, see [screenshots](#screenshots) below.
 
@@ -25,8 +25,6 @@ __Note: for a JavaScript version of this check out my [MLB command](https://gith
 
 It also shows who's pitching (_+stats_), who's batting (_+stats_), current balls/strikes, if anyone's (and who's) on base, current win-lose record for both teams, and where the game is being broadcast on TV and radio.
 
-You don't need the space between mlb and the team code, so could call the Yankees just as _"mlbnyy"_
-
-I started to update how variables are printed within strings to <pre>"Hello world, $variablename!"</pre> rather than <pre>"Hello world, ". $variablename. "!"</pre> but am yet to finish. Needs doing.
+You don't need the space between mlb and the team code, so could call the Yankees just as "_mlbnyy_"
 
 Uses [David Ferguson](http://dferg.us)'s [Workflow PHP class](https://github.com/jdfwarrior/Workflows).
