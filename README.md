@@ -1,6 +1,6 @@
 # MLB Scores Alfred Workflow
 
-Workflow for Alfred V2 that uses the MLB API to check info about current games (i.e. quickly check the score, who's on base, who's pitching etc.)
+Workflow for Alfred that uses the MLB API to check info about current games (i.e. quickly check the score, who's on base, who's pitching etc.)
 
 Keyword is mlb, followed by the 2 or 3 letter code for the team you're looking for (e.g. _nyy_ for the Yankees).
 
@@ -8,7 +8,7 @@ Shows runners on base at a glance using icons in the Alfred response, see [scree
 
 If a game has already finish today it'll show the final result, including R|H|E, if a game is scheduled for today it'll give upcoming info.
 
-__Note: for a JavaScript version of this check out my [MLB command](https://github.com/edmerix/edmerix.github.io/blob/master/core.js#L450) on my [personal website](https://edmerix.github.io) :)__
+__Note: for a JavaScript version of this check out my [MLB command](https://github.com/edmerix/edmerix.github.io/blob/master/core.js#L665) on my [personal website](https://edmerix.github.io) :)__
 
 ## Screenshots
 
