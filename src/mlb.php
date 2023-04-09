@@ -245,7 +245,7 @@ for($n = 0; $n < count($allGames); $n++){
 			if($base_sub != 1) $base_sub .= "s";
 			$w->result($d++, "na", implode(" | ",$bases), $base_sub, $base_icon.".png", "no");
 			
-			$topLine = "Yankees: $winPct ($winRecord - $lossRecord) | $opponentName: $opponentWinPct ($opponentWinRecord - $opponentLossRecord)";
+			$topLine = "$teamName: $winPct ($winRecord - $lossRecord) | $opponentName: $opponentWinPct ($opponentWinRecord - $opponentLossRecord)";
 			$subLine = "Game $gameInSeries in $totalInSeries game series";
 			$w->result($d++, "na", $topLine, $subLine, $icon, "no");
 			
