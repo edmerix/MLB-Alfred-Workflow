@@ -183,6 +183,7 @@ for($n = 0; $n < count($allGames); $n++){
 			$outs = $linescore->outs;
 			
 			$runners = $gameData->liveData->plays->currentPlay->runners;
+			$matchUp = $gameData->liveData->plays->currentPlay->matchup;
 			
 			$pitcher = $linescore->defense->pitcher->fullName;
 			$atBat = $linescore->offense->batter->fullName;
@@ -218,27 +219,22 @@ for($n = 0; $n < count($allGames); $n++){
 			// runners_on_base
 			$bases = array("-","-","-");
 			$base_icon = "000";
-			for($r = 0; $r < count($runners); $r++){
-				if(!$runners[$r]->movement->isOut){
-					$where = $runners[$r]->movement->end;
-					switch($where){
-						case "1B":
-						$bases[0] = "1st: {$runners[$r]->details->runner->fullName}";
-						$base_icon[0] = "1";
-						break;
-						case "2B":
-						$bases[1] = "2nd: {$runners[$r]->details->runner->fullName}";
-						$base_icon[1] = "1";
-						break;
-						case "3B":
-						$bases[2] = "3rd: {$runners[$r]->details->runner->fullName}";
-						$base_icon[2] = "1";
-						break;
-					}
-				}				
+			$b = 0;
+			if(property_exists($matchUp,'postOnFirst')){
+				$bases[0] = "1st: {$matchUp->postOnFirst->fullName}";
+				$base_icon[0] = "1";
+				$b++;
 			}
-			
-			$b = count($runners);
+			if(property_exists($matchUp,'postOnSecond')){
+				$bases[1] = "2nd: {$matchUp->postOnSecond->fullName}";
+				$base_icon[1] = "1";
+				$b++;
+			}
+			if(property_exists($matchUp,'postOnThird')){
+				$bases[2] = "3rd: {$matchUp->postOnThird->fullName}";
+				$base_icon[2] = "1";
+				$b++;
+			}
 			$base_sub = $b." runner";
 			if($b != 1) $base_sub .= "s";
 			$base_sub .= " on base";
