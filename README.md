@@ -2,6 +2,8 @@
 
 Workflow for Alfred that uses the MLB API to check info about current games (i.e. quickly check the score, who's on base, who's pitching etc.)
 
+Requires PHP installed, by default via homebrew and in `/opt/homebrew/bin/php.` This can be changed in the script filter after installation.
+
 Keyword is mlb, followed by the 2 or 3 letter code for the team you're looking for (e.g. _nyy_ for the Yankees).
 
 Shows runners on base at a glance using icons in the Alfred response, see [screenshots](#screenshots) below.
