@@ -40,16 +40,12 @@ if(!$keys || count($keys) < 1){
 }
 $teamID = -1;
 $teamName = '';
-$teamData = -1;
 $d = 0;
 for($k = 0; $k < count($keys); $k++){
 	if(strcasecmp($data->teams[$keys[$k]]->abbreviation,$team) == 0
-	&& (strcasecmp($data->teams[$keys[$k]]->league->name,"American League") == 0
-	|| strcasecmp($data->teams[$keys[$k]]->league->name,"National League") == 0)){
-		$teamData = $data->teams[$keys[$k]];
-		$teamName = $teamData->teamName;
-		$teamID = $teamData->id;
-		$teamAbbr = $teamData->abbreviation;
+	&& $data->teams[$keys[$k]]->sport->id == 1){
+		$teamName = $data->teams[$keys[$k]]->teamName;
+		$teamID = $data->teams[$keys[$k]]->id;
 	}
 }
 if($teamID < 0){
@@ -77,8 +73,9 @@ for($g = 0; $g < count($games); $g++){
 }
 
 $allGames = $awayGames + $homeGames;
-if(count($allGames) < 0){
+if(count($allGames) < 1){
 	$w->result(0, 'na', "No $teamName game found for today", "", $icon, "no");
+	echo $w->toxml();
 	return;
 }
 
